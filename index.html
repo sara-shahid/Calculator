@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+
+    <link rel="stylesheet" href="src/output.css">
+    <script src="javascript.js" defer></script>
+</head>
+
+<body class="min-h-screen bg-[#F7F5FC] flex items-center justify-center p-4">
+
+    <main class="w-full max-w-md">
+        <header class="text-center mb-5">
+            <h1 class="text-3xl font-bold text-[#403653]">Calculator</h1>
+            <p class="text-sm text-[#837795] mt-1">Simple & Scientific</p>
+        </header>
+
+        <section class="bg-[#E9E3F5] rounded-2xl shadow-lg p-4 sm:p-5">
+            <div class="bg-white rounded-xl p-4 mb-4 text-right">
+                <div id="expression" class="text-sm text-[#9286A5] min-h-5 break-all"></div>
+                <input
+                    id="display"
+                    type="text"
+                    value="0"
+                    readonly
+                    aria-label="Calculator display"
+                    class="w-full bg-transparent text-[#403653] text-3xl font-semibold text-right outline-none mt-2"
+                >
+            </div>
+
+            <div id="buttons" class="grid grid-cols-4 gap-2">
+                <button data-action="clear" class="key bg-[#E9B7C0] text-[#653947]">C</button>
+                <button data-action="delete" class="key bg-[#E2DCEA] text-[#493C60]">DEL</button>
+                <button data-value="(" class="key bg-[#D9CDEE] text-[#493C60]">(</button>
+                <button data-value=")" class="key bg-[#D9CDEE] text-[#493C60]">)</button>
+
+                <button data-value="sin(" class="key bg-[#D9CDEE] text-[#493C60]">sin</button>
+                <button data-value="cos(" class="key bg-[#D9CDEE] text-[#493C60]">cos</button>
+                <button data-value="tan(" class="key bg-[#D9CDEE] text-[#493C60]">tan</button>
+                <button data-value="log(" class="key bg-[#D9CDEE] text-[#493C60]">log</button>
+
+                <button data-value="sqrt(" class="key bg-[#D9CDEE] text-[#493C60]">√</button>
+                <button data-action="square" class="key bg-[#D9CDEE] text-[#493C60]">x²</button>
+                <button data-value="^" class="key bg-[#D9CDEE] text-[#493C60]">xʸ</button>
+                <button data-value="pi" class="key bg-[#D9CDEE] text-[#493C60]">π</button>
+
+                <button data-value="7" class="key number-key">7</button>
+                <button data-value="8" class="key number-key">8</button>
+                <button data-value="9" class="key number-key">9</button>
+                <button data-value="/" class="key operator-key">÷</button>
+
+                <button data-value="4" class="key number-key">4</button>
+                <button data-value="5" class="key number-key">5</button>
+                <button data-value="6" class="key number-key">6</button>
+                <button data-value="*" class="key operator-key">×</button>
+
+                <button data-value="1" class="key number-key">1</button>
+                <button data-value="2" class="key number-key">2</button>
+                <button data-value="3" class="key number-key">3</button>
+                <button data-value="-" class="key operator-key">−</button>
+
+                <button data-action="sign" class="key bg-[#E2DCEA] text-[#493C60]">±</button>
+                <button data-value="0" class="key number-key">0</button>
+                <button data-value="." class="key number-key">.</button>
+                <button data-value="+" class="key operator-key">+</button>
+
+                <button data-value="%" class="key bg-[#D9CDEE] text-[#493C60]">%</button>
+                <button data-action="backspace" class="key bg-[#E2DCEA] text-[#493C60]">⌫</button>
+                <button data-action="equals" class="key col-span-2 bg-[#B9DCCB] text-[#2E5142]">=</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
